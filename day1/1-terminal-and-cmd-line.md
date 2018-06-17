@@ -112,10 +112,10 @@ It should contain a bunch of things that contain `/bin` paths. List the contents
 
     $ ls /bin
     [          chmod      date       domainname expr       ksh        ln         mv         pwd        sh         sync       unlink
-bash       cp         dd         echo       hostname   launchctl  ls         pax        rm         sleep      tcsh       wait4path
-cat        csh        df         ed         kill       link       mkdir      ps         rmdir      stty       test       zsh
+    bash       cp         dd         echo       hostname   launchctl  ls         pax        rm         sleep      tcsh       wait4path 
+    cat        csh        df         ed         kill       link       mkdir      ps         rmdir      stty       test       zsh
 
-Aha! So all of those commands we were playing with above are just executable programs that like in a path that `Bash` knows about. You can add other paths to your `$PATH` variable to make `Bash` aware of other program locations. __But beware__: if you accidentally delete the contents of the variable, it can be a huge pain to fix!
+Aha! So all of those commands we were playing with above are just executable programs that live in a path that `Bash` knows about. You can add other paths to your `$PATH` variable to make `Bash` aware of other program locations. __But beware__: if you accidentally delete the contents of the variable, it can be a huge pain to fix!
 
 
 ## Text editors (for making quick changes)
