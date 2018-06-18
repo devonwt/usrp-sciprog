@@ -105,21 +105,21 @@ Using branches will make more sense when you are actually working with code, but
 1. Switch to the 'test' branch
 2. Create a new file and add/commit it:
 
-  	 $ echo 'this is a test' > test.txt
-	 $ git add test.txt
-	 $ git commit -am 'added test file'
+       $ echo 'this is a test' > test.txt
+       $ git add test.txt
+       $ git commit -am 'added test file'
 
 3. Switch back to 'master' branch and convince yourself that test.txt is no longer there -- it only exists in the 'test' branch!
 
 4. Now imagine you are satisfied with the changes you made on the test branch, and have convinced yourself that those changes haven't broken your project, you can merge those changes into the current branch (master):
 
-    	$ git merge test
+       $ git merge test
 
 5. Now, convince yourself that `test.txt` exists in your master branch.
 
 6. OK, now since this file is actually junk, let's now get rid of it, as well as deleting our test branch (let's not let our repository get too cluttered):
 
-   	$ git rm test.txt
+        $ git rm test.txt
    	$ git branch -d test
    	$ git branch
    	* master
