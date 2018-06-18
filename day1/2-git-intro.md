@@ -27,19 +27,19 @@ After going through this mini tutorial, you should read [this longer tutorial](h
 
 3. Clone the repository onto your computer (suggestion: make a 'repositories' or 'repos' or 'projects' directory under your home directory and clone it there):
 
-   		$ cd
-		$ mkdir repositories
-		$ cd repositories
-		$ git clone https://github.com/username/reponame.git (or git clone git@github.com:username/reponame)
+        $ cd
+        $ mkdir repositories
+        $ cd repositories
+        $ git clone https://github.com/username/reponame.git (or git clone git@github.com:username/reponame)
 
 4. Edit the readme file (`README.md`) on your laptop to include a sentence or two describing your project.
     * Use `git status` to see what files you have edited
 
 5. Add the file to the staging area, then commit these changes and push them back to GitHub:
 
-   		$ git add README.md
-   		$ git commit -m 'descriptive but concise message'
-   		$ git push
+        $ git add README.md
+        $ git commit -m 'descriptive but concise message'
+        $ git push
 
 6. Use `git status` again to see that all changes have been committed
 
@@ -50,29 +50,29 @@ After going through this mini tutorial, you should read [this longer tutorial](h
 
 8. Back on your laptop, pull these new changes
 
-   		$ git pull
+        $ git pull
 
    This is how to 'sync' a repository between computers.
 
 9. Now, create a new file called `notes.txt` and add some content (type jibberish if you are feeling uninspired!).  To tell `git` to recognize and track this new file, you first have to add it to the repository; after which you can commit the changes.
 
-   		$ git add notes.txt
-   		$ git commit -m 'added notes file'
-   		$ git push
+        $ git add notes.txt
+        $ git commit -m 'added notes file'
+        $ git push
 
 To summarize, this is what a typical simple workflow should look like:
 
-		<sit down at computer>
-		$ cd /path/to/my/project/dir
-		$ git pull
-		<edit and/or add some files>
-		$ git add <files I edited>
-		$ git commit -m 'briefly describe changes'
-		<edit some more>
-		$ git add <files I edited>
-		$ git commit -m 'more changes'
-		<when you're ready to stand up from computer>
-		$ git push
+        <sit down at computer>
+        $ cd /path/to/my/project/dir
+        $ git pull
+        <edit and/or add some files>
+        $ git add <files I edited>
+        $ git commit -m 'briefly describe changes'
+        <edit some more>
+        $ git add <files I edited>
+        $ git commit -m 'more changes'
+        <when you're ready to stand up from computer>
+        $ git push
 
 __One more note__: Whenever you rename or remove files that are being tracked by git, use the `git rm` or `git mv` commands rather than just `rm` or `mv`. so that git won't get confused.
 ​
@@ -85,20 +85,20 @@ Git repositories let you keep track of entire histories of files that are tracke
 
 By default, you will typically be working on a branch called 'master', which you can confirm by executing the `git branch` command:
 
-		$ git branch
-		* master
+        $ git branch
+        * master
 
 To switch between branches, you use the `git checkout <branchname>` command. In your current repo, you probably only have one branch (master). To create a new branch with a name, e.g., "test", use `checkout` with the `-b` flag:
 
-		$ git checkout -b test
-		Switched to a new branch 'test'
-		$ git branch
-		  master
-		* test
-		$ git checkout master
-		$ git branch
-		* master
-		  test
+        $ git checkout -b test
+        Switched to a new branch 'test'
+        $ git branch
+          master
+        * test
+        $ git checkout master
+        $ git branch
+        * master
+          test
 
 Using branches will make more sense when you are actually working with code, but for now try the following:
 
@@ -118,11 +118,11 @@ Using branches will make more sense when you are actually working with code, but
 5. Now, convince yourself that `test.txt` exists in your master branch.
 
 6. OK, now since this file is actually junk, let's now get rid of it, as well as deleting our test branch (let's not let our repository get too cluttered):
-
+        
         $ git rm test.txt
-   	$ git branch -d test
-   	$ git branch
-   	* master
+        $ git branch -d test
+        $ git branch
+        * master
 
 ---
 
@@ -136,7 +136,7 @@ You may find yourself in a position where you want to contribute to a GitHub rep
 4. Make any desired changes on this branch.
 5. Push this branch back to your fork of the original repo:
 
-   	$ git push origin my-edits
+        $ git push origin my-edits
 
 6. On GitHub, create a pull request following [these instructions]( https://help.github.com/articles/creating-a-pull-request/) (or actually, there should be a helpful little "create pull request" button on your repo page after you push, to shortcut this process).
 7. The owner of the repo can then review it and decide whether/when to merge it in, and can also make comments.  You can continue to push changes to this branch while the pull request is still open.
